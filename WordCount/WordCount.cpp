@@ -55,13 +55,16 @@ int main(int argc, char *argv[])
 		}
 		result = wc.Tell(f);
 		if (l_flag) {
-			printf("%-d ", result.line_count);
+			printf("%d ", result.line_count);
 		}
 		if (w_flag) {
-			printf("%-d ", result.word_count);
+			printf("%d ", result.word_count);
 		}
 		if (c_flag) {
-			printf("%-d ", result.char_count);
+			printf("%d ", result.char_count);
+		}
+		if (a_flag) {
+			printf("%d %d %d ", result.code_count, result.comment_count, result.empty_count);
 		}
 		printf("%s\n", argv[i]);
 	}
